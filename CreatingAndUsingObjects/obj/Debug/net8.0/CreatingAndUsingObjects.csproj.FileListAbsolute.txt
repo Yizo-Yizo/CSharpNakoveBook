@@ -1,0 +1,14 @@
+C:\Users\seleb\OneDrive\Documents\GitHub\C#\CreatingAndUsingObjects\bin\Debug\net8.0\CreatingAndUsingObjects.exe
+C:\Users\seleb\OneDrive\Documents\GitHub\C#\CreatingAndUsingObjects\bin\Debug\net8.0\CreatingAndUsingObjects.deps.json
+C:\Users\seleb\OneDrive\Documents\GitHub\C#\CreatingAndUsingObjects\bin\Debug\net8.0\CreatingAndUsingObjects.runtimeconfig.json
+C:\Users\seleb\OneDrive\Documents\GitHub\C#\CreatingAndUsingObjects\bin\Debug\net8.0\CreatingAndUsingObjects.dll
+C:\Users\seleb\OneDrive\Documents\GitHub\C#\CreatingAndUsingObjects\bin\Debug\net8.0\CreatingAndUsingObjects.pdb
+C:\Users\seleb\OneDrive\Documents\GitHub\C#\CreatingAndUsingObjects\obj\Debug\net8.0\CreatingAndUsingObjects.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\seleb\OneDrive\Documents\GitHub\C#\CreatingAndUsingObjects\obj\Debug\net8.0\CreatingAndUsingObjects.AssemblyInfoInputs.cache
+C:\Users\seleb\OneDrive\Documents\GitHub\C#\CreatingAndUsingObjects\obj\Debug\net8.0\CreatingAndUsingObjects.AssemblyInfo.cs
+C:\Users\seleb\OneDrive\Documents\GitHub\C#\CreatingAndUsingObjects\obj\Debug\net8.0\CreatingAndUsingObjects.csproj.CoreCompileInputs.cache
+C:\Users\seleb\OneDrive\Documents\GitHub\C#\CreatingAndUsingObjects\obj\Debug\net8.0\CreatingAndUsingObjects.dll
+C:\Users\seleb\OneDrive\Documents\GitHub\C#\CreatingAndUsingObjects\obj\Debug\net8.0\refint\CreatingAndUsingObjects.dll
+C:\Users\seleb\OneDrive\Documents\GitHub\C#\CreatingAndUsingObjects\obj\Debug\net8.0\CreatingAndUsingObjects.pdb
+C:\Users\seleb\OneDrive\Documents\GitHub\C#\CreatingAndUsingObjects\obj\Debug\net8.0\CreatingAndUsingObjects.genruntimeconfig.cache
+C:\Users\seleb\OneDrive\Documents\GitHub\C#\CreatingAndUsingObjects\obj\Debug\net8.0\ref\CreatingAndUsingObjects.dll

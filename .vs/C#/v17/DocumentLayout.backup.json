@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\seleb\\OneDrive\\Documents\\GitHub\\C#\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{60884517-3761-478F-AE4F-827F0FEED461}|C#\\C#.csproj|c:\\users\\seleb\\onedrive\\documents\\github\\c#\\c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60884517-3761-478F-AE4F-827F0FEED461}|C#\\C#.csproj|solutionrelative:c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\seleb\\OneDrive\\Documents\\GitHub\\C#\\C#\\Program.cs",
+              "RelativeDocumentMoniker": "C#\\Program.cs",
+              "ToolTip": "C:\\Users\\seleb\\OneDrive\\Documents\\GitHub\\C#\\C#\\Program.cs",
+              "RelativeToolTip": "C#\\Program.cs",
+              "ViewState": "AgIAAHgHAAAAAAAAAAAcwHwHAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-13T20:31:27.596Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

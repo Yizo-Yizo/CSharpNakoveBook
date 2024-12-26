@@ -1,0 +1,6 @@
+C:\Users\seleb\OneDrive\Documents\GitHub\C#\CSharpNUnitTests\bin\Debug\net8.0\CoverletSourceRootsMapping_CSharpNUnitTests
+C:\Users\seleb\OneDrive\Documents\GitHub\C#\CSharpNUnitTests\obj\Debug\net8.0\CSharpNUnitTests.csproj.AssemblyReference.cache
+C:\Users\seleb\OneDrive\Documents\GitHub\C#\CSharpNUnitTests\obj\Debug\net8.0\CSharpNUnitTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\seleb\OneDrive\Documents\GitHub\C#\CSharpNUnitTests\obj\Debug\net8.0\CSharpNUnitTests.AssemblyInfoInputs.cache
+C:\Users\seleb\OneDrive\Documents\GitHub\C#\CSharpNUnitTests\obj\Debug\net8.0\CSharpNUnitTests.AssemblyInfo.cs
+C:\Users\seleb\OneDrive\Documents\GitHub\C#\CSharpNUnitTests\obj\Debug\net8.0\CSharpNUnitTests.csproj.CoreCompileInputs.cache

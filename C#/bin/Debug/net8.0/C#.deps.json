@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "C#/1.0.0": {
+        "dependencies": {
+          "CreatingAndUsingObjects": "1.0.0"
+        },
+        "runtime": {
+          "C#.dll": {}
+        }
+      },
+      "CreatingAndUsingObjects/1.0.0": {
+        "runtime": {
+          "CreatingAndUsingObjects.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "C#/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CreatingAndUsingObjects/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
