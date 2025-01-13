@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,6 +20,41 @@ namespace C_
             this.RightChild = rightChild;
         }
 
+        public T ReturnRoot()
+        {
+            return this.Value;
+        }
+
+        public List<T> ListOfVertices(out List<T> listOfVertices)
+        {
+            int index = 1;
+            List<T> list = new List<T>();
+            listOfVertices = new List<T>();
+
+            CreatingListOfVertices(ref listOfVertices);
+
+            return listOfVertices; 
+        }
+
+        private void CreatingListOfVertices(ref List<T> listOfVertices)
+        {
+            if (this.LeftChild == null)
+            {
+                this.LeftChild.CreatingListOfVertices(ref listOfVertices);
+            }
+
+            if (this.Value is int)
+            {
+                listOfVertices.Add(this.Value);
+            }
+
+            if (this.RightChild == null)
+            {
+                this.RightChild.CreatingListOfVertices(ref listOfVertices);
+            }
+
+        }
+
         public void PrintVerticeWithLeaveSuccessors()
         {
             if (this.LeftChild != null || this.RightChild != null)
@@ -33,12 +69,12 @@ namespace C_
                     Console.WriteLine(this.Value);
                 }
             }
-
-            // Recurse to the left and right children
             if (this.LeftChild != null)
             {
                 this.LeftChild.PrintVerticeWithLeaveSuccessors();
             }
+
+            Console.WriteLine(this.Value);
 
             if (this.RightChild != null)
             {

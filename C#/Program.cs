@@ -2033,7 +2033,7 @@ skillful software engineers.</p></body>
         for (int i = 0; i < levelSums.Count; i++)
         {
             Console.WriteLine($"Level {i}: {levelSums[i]}");
-        }*/
+        }
 
         // Ch 17 No. 5
         BinaryTreee<int> binaryTree =
@@ -2046,7 +2046,49 @@ skillful software engineers.</p></body>
                     new BinaryTreee<int>(15,
                         new BinaryTreee<int>(3), null));
 
-        binaryTree.PrintVerticeWithLeaveSuccessors();
+
+        binaryTree.PrintVerticeWithLeaveSuccessors();*/
+
+        // Ch 17 No.6
+        BinaryTreee<int> binaryTree =
+                new BinaryTreee<int>(14,
+                    new BinaryTreee<int>(19,
+                        new BinaryTreee<int>(23),
+                        new BinaryTreee<int>(6,
+                            new BinaryTreee<int>(10),
+                            new BinaryTreee<int>(21))),
+                    new BinaryTreee<int>(15,
+                        new BinaryTreee<int>(3), null));
+
+        Console.WriteLine($"IsBalanced Tree: {IsPerctlyBalanced(binaryTree)}");
+    }
+
+    // Ch 17 No. 6
+    public static bool IsPerctlyBalanced(BinaryTreee<int> binaryTree)
+    {
+        List<int> list = new List<int>();
+        int leftCount = 0;
+        int rightCount = 0;
+        bool isRightSide = false;
+
+        for (int i = 0; i < binaryTree.ListOfVertices(out list).Count; i++)
+        {
+            if (binaryTree.ReturnRoot() == list[i])
+            {
+                isRightSide = true;
+            }
+
+            if (isRightSide)
+            {
+                rightCount++;
+            }
+            else
+            {
+                leftCount++;
+            }
+        }
+
+        return rightCount == leftCount;
     }
     // Ch 17 No.4
     public static List<int> GetLevelSums(BinaryTreee<int> root)
