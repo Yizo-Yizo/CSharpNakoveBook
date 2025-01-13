@@ -187,7 +187,7 @@ namespace C_
         {
             get
             {
-                return this.Count;
+                return this.count;
             }
         }
     }

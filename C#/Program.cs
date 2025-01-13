@@ -1,4 +1,6 @@
-﻿using System.Diagnostics.Metrics;
+﻿using System.Collections;
+using System.Data;
+using System.Diagnostics.Metrics;
 using System.Diagnostics.Tracing;
 using System.Globalization;
 using System.Security.Cryptography.X509Certificates;
@@ -1892,7 +1894,7 @@ skillful software engineers.</p></body>
         foreach(KeyValuePair<int, int> occrance in countOcurrances)
         {
             Console.WriteLine($"{occrance.Key} -> {occrance.Value}");
-        }*/
+        }
 
         // Ch 16 No. 8
         List<int> numbers = new List<int> { 2, 2, 3, 3, 2, 3, 4, 3, 3 };
@@ -1918,10 +1920,414 @@ skillful software engineers.</p></body>
         }
 
         // Ch 16 No. 10
+        int N = 5, M = 16;
+        Queue<int> sequence = SubSequence(N, M);
+
+        foreach (int i in sequence)
+        {
+            Console.Write(i + " ");
+        }
+
+        // Ch 16 No. 15
+        var linkedListSorting = new LinkedListSorting();
+
+        linkedListSorting.Add(4);
+        linkedListSorting.Add(2);
+        linkedListSorting.Add(1);
+        linkedListSorting.Add(3);
+
+        linkedListSorting.SortNumbers();
+
+        for (int i = 0; i < linkedListSorting.Count; i++)
+        {
+            Console.Write(linkedListSorting[i]+" ");
+        }
+
+        // Ch 16 No. 16
+        string directoryPath = @"C:\Users\panth";
+        AllDirectoriesDFS(directoryPath);
+
+        // Ch 16 No. 18
+        int[,] matrix =
+        {
+            { 0, 0, 0, -1, 0, -1 },
+            { 0, -1, 0, -1, 0, -1 },
+            { 0, 2, -1, 0, -1, 0 },
+            { 0, -1, 0, 0, 0, 0 },
+            { 0, 0, 0, -1, -1, 0 },
+            { 0, 0, 0, -1, 0, -1 }
+        };
+
+        var labyrinth = Labyrinth(matrix);
+
+        for (int row = 0; row < labyrinth.GetLength(0); row++)
+        {
+            for (int col = 0; col < labyrinth.GetLength(1); col++)
+            {
+                Console.Write(labyrinth[row, col] + " ");
+            }
+            Console.WriteLine();
+        }
+
+        // Ch 17 No. 1
+
+        BinaryTree tree = new BinaryTree(5,
+            new BinaryTree(3,
+                new BinaryTree(3),
+                new BinaryTree(4)),
+            new BinaryTree(7,
+                new BinaryTree(5),
+                null));
+
+        int target = 5;
+        int count = tree.CountOccurrences(target);
+        Console.WriteLine($"Number {target} occurs {count} time(s) in the tree.");
+
+        // Ch 17 No. 2
+        Tree<int> tree =
+           new Tree<int>(7,
+            new Tree<int>(19,
+             new Tree<int>(1),
+             new Tree<int>(12),
+             new Tree<int>(31)),
+            new Tree<int>(21),
+            new Tree<int>(14,
+             new Tree<int>(23),
+             new Tree<int>(6))
+           );
+
+        tree.RootsWithKSubTrees(2);
+
+        // Ch 17 No. 3
+        Tree<int> tree =
+   new Tree<int>(7,
+       new Tree<int>(19,
+           new Tree<int>(1),
+           new Tree<int>(12,
+               new Tree<int>(31)
+           )
+       ),
+       new Tree<int>(21), // Leaf node with no children
+       new Tree<int>(14,
+           new Tree<int>(23),
+           new Tree<int>(6)
+       )
+   );
+
+        Console.WriteLine(tree.NumberOfLeaves());
+
+        // Ch 17 No. 4
+        BinaryTreee<int> binaryTree =
+                new BinaryTreee<int>(14,
+                    new BinaryTreee<int>(19,
+                        new BinaryTreee<int>(23),
+                        new BinaryTreee<int>(6,
+                            new BinaryTreee<int>(10),
+                            new BinaryTreee<int>(21))),
+                    new BinaryTreee<int>(15,
+                        new BinaryTreee<int>(3), null));
+
+        var levelSums = GetLevelSums(binaryTree);
+
+        Console.WriteLine("Sum of vertices at each level:");
+        for (int i = 0; i < levelSums.Count; i++)
+        {
+            Console.WriteLine($"Level {i}: {levelSums[i]}");
+        }*/
+
+        // Ch 17 No. 5
+        BinaryTreee<int> binaryTree =
+                new BinaryTreee<int>(14,
+                    new BinaryTreee<int>(19,
+                        new BinaryTreee<int>(23),
+                        new BinaryTreee<int>(6,
+                            new BinaryTreee<int>(10),
+                            new BinaryTreee<int>(21))),
+                    new BinaryTreee<int>(15,
+                        new BinaryTreee<int>(3), null));
+
+        binaryTree.PrintVerticeWithLeaveSuccessors();
+    }
+    // Ch 17 No.4
+    public static List<int> GetLevelSums(BinaryTreee<int> root)
+    {
+        var result = new List<int>();
+        if (root == null)
+        {
+            return result;
+        }
+
+        var queue = new Queue<(BinaryTreee<int> Node, int Level)>();
+        queue.Enqueue((root, 0));
+
+        while (queue.Count > 0)
+        {
+            var (currentNode, level) = queue.Dequeue();
+
+            // Ensure the list has a spot for the current level
+            if (result.Count <= level)
+            {
+                result.Add(0);
+            }
+
+            // Add the current node's value to the corresponding level
+            result[level] += currentNode.Value;
+
+            // Enqueue left and right children
+            if (currentNode.LeftChild != null)
+            {
+                queue.Enqueue((currentNode.LeftChild, level + 1));
+            }
+
+            if (currentNode.RightChild != null)
+            {
+                queue.Enqueue((currentNode.RightChild, level + 1));
+            }
+        }
+
+        return result;
     }
 
-    // Ch 16 No. 11
-    
+    // Ch 16 No. 18
+    public static int[,] Labyrinth(int[,] matrix)
+    {
+        // Finding the root/starting point
+        for (int row = 0 ; row < matrix.GetLength(0); row++)
+        {
+            for (int col = 0 ; col < matrix.GetLength(1); col++)
+            {
+                if (matrix[row, col] == 2)
+                {
+                    matrix[row, col] = 0;
+                    BFSLabyrinth(matrix, row, col);
+                    return matrix;
+                }
+            }
+        }
+
+        return matrix;
+    }
+
+    public static void BFSLabyrinth(int[,] matrix, int rootRow, int rootCol)
+    {
+        int matrixSize = matrix.GetLength(0) * matrix.GetLength(1);
+        int moves = 0;
+        int count = 1;
+
+        while(moves <= matrixSize)
+        {
+
+            if ((rootRow + count <= matrix.GetLength(0)) && (rootRow - count >= 0) && (rootCol + count <= matrix.GetLength(1)) && (rootCol - count >= 0))
+            {
+                if (matrix[rootRow + count, rootCol] == 0)
+                {
+                    AddUpwards(matrix, rootRow, rootCol, count);
+                    moves++;
+                }
+                else if (matrix[rootRow - count, rootCol] == 0)
+                {
+                    AddDownwards(matrix, (rootRow - count), rootCol, count);
+                    moves++;
+                }
+                else if (matrix[rootRow, rootCol + count] == 0)
+                {
+                    AddToTheRight(matrix, rootRow, rootCol, count);
+                    moves++;
+                }
+                else if (matrix[rootRow, rootCol - count] == 0)
+                {
+                    AddToTheLeft(matrix, rootRow, rootCol, count);
+                    moves++;
+                }
+                else 
+                {
+                    moves++;
+                }
+
+            }
+
+        }
+    }
+
+    public static void AddToTheLeft(int[,] matrix, int row, int col, int count)
+    {
+        while (true)
+        {
+            if ((col - count >= 0) && (matrix[row, col - count] != -1))
+            {
+                matrix[row, col - count] += matrix[row, col + (count + 1)];
+                count++;
+            }
+            else
+            {
+                break;
+            }
+        }
+    }
+
+    public static void AddToTheRight(int[,] matrix, int row, int col, int count)
+    {
+        while (true)
+        {
+            if ((col + count <= matrix.GetLength(1)) && (matrix[row, col + count] != -1))
+            {
+                matrix[row, col + count] += matrix[row, col + (count - 1)];
+                count++;
+            }
+            else
+            {
+                break;
+            }
+        }
+    }
+
+    public static void AddDownwards(int[,] matrix, int row, int col, int count)
+    {
+        while (true)
+        {
+            if ((row - count >= 0) && (matrix[row - count, col] != -1))
+            {
+                matrix[row - count, col] += matrix[row - (count + 1), col];
+                count++;
+            }
+            else
+            {
+                break;
+            }
+        }
+    }
+
+    public static void AddUpwards(int[,] matrix,  int row, int col, int count)
+    {
+        while (true)
+        {
+            if ((row + count <= matrix.GetLength(0)) && (matrix[row + count, col] != -1))
+            {
+                matrix[row + count, col] += matrix[row + (count - 1), col];
+                count++;
+            }
+            else
+            {
+                break;
+            }
+        }
+    }
+    // Ch 16 No. 17
+    public static void AllDirectoriesDFS(string directoryPath)
+    {
+        Stack<string> directoriesVisited = new Stack<string>();
+
+        // Start with the root directory
+        directoriesVisited.Push(directoryPath);
+
+        while (directoriesVisited.Count > 0)
+        {
+            var currentDirectory = directoriesVisited.Pop();
+
+            Console.WriteLine(currentDirectory);
+
+            try
+            {
+                var subDirectories = Directory.GetDirectories(currentDirectory);
+
+                foreach ( var subDirectory in subDirectories)
+                {
+                    directoriesVisited.Push(subDirectory);
+                }
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                Console.WriteLine($"Access denied to: {currentDirectory}. {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while accessing: {currentDirectory}. {ex.Message}");
+            }
+        }
+    }
+    // Ch 16 No. 16
+    public static void AllDirectoriesBFS(string directoryPath)
+    {
+        Queue<string> directoriesVisited = new Queue<string>();
+
+        // Start with the root directory
+        directoriesVisited.Enqueue(directoryPath);
+
+        while (directoriesVisited.Count > 0)
+        {
+            // Dequeue the next directory to process
+            string currentDirectory = directoriesVisited.Dequeue();
+
+            // Print the current directory
+            Console.WriteLine(currentDirectory);
+
+            try
+            {
+                // Get subdirectories of the current directory
+                string[] subdirectories = Directory.GetDirectories(currentDirectory);
+
+                // Enqueue all subdirectories
+                foreach (string subdir in subdirectories)
+                {
+                    directoriesVisited.Enqueue(subdir);
+                }
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                Console.WriteLine($"Access denied to: {currentDirectory}. {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while accessing: {currentDirectory}. {ex.Message}");
+            }
+        }
+    }
+    // Ch 16 No. 14
+    // Refer to CircularQueue class
+
+        // Ch 16 No. 13
+        // Refere to DynamicDeque class
+
+        // Ch 16 No. 12
+        // Refer to DynamicStack class
+
+        // Ch 16 No. 11
+        // Refer to DynamicDoublyList class
+
+        // Ch 16 No. 10
+    public static Queue<int> SubSequence(int N, int M)
+    {
+        Queue<int> sequence = new Queue<int>();
+        Queue<int> newSequence = new Queue<int>();
+
+        sequence.Enqueue(N);
+        int current = sequence.Dequeue();
+        newSequence.Enqueue(current);
+
+        while (current != M)
+        {
+
+            if (current * 2 <= M)
+            {
+                newSequence.Enqueue(current * 2);
+                sequence.Enqueue(current * 2);
+            }
+            else if (current + 2 <= M)
+            {
+                newSequence.Enqueue(current + 2);
+                sequence.Enqueue(current + 2);
+            }
+            else
+            {
+                newSequence.Enqueue(current + 1);
+                sequence.Enqueue(current + 1);
+            }
+
+            current = sequence.Dequeue();
+        }
+
+        return newSequence;
+    }
 
 
     // Ch 16 No. 9

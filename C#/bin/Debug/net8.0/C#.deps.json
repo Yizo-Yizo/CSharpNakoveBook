@@ -16,7 +16,10 @@
       },
       "CreatingAndUsingObjects/1.0.0": {
         "runtime": {
-          "CreatingAndUsingObjects.dll": {}
+          "CreatingAndUsingObjects.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
