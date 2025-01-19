@@ -2047,7 +2047,7 @@ skillful software engineers.</p></body>
                         new BinaryTreee<int>(3), null));
 
 
-        binaryTree.PrintVerticeWithLeaveSuccessors();*/
+        binaryTree.PrintVerticeWithLeaveSuccessors();
 
         // Ch 17 No.6
         BinaryTreee<int> binaryTree =
@@ -2061,6 +2061,155 @@ skillful software engineers.</p></body>
                         new BinaryTreee<int>(3), null));
 
         Console.WriteLine($"IsBalanced Tree: {IsPerctlyBalanced(binaryTree)}");
+
+        // Ch 17 No. 7
+        Console.WriteLine("Connected graph components: ");
+        for (int v = 0; v < graph.Size; v++)
+        {
+            if (!visited[v])
+            {
+                TraverseDFS(v);
+                Console.WriteLine();
+            }
+        }
+
+        // Ch 17 No. 8
+        Graph graph = new Graph(new List<int>[] {
+  new List<int>() {4},       // successors of vertice 0 
+  new List<int>() {1, 2, 6}, // successors of vertice 1 
+  new List<int>() {1, 6},    // successors of vertice 2 
+  new List<int>() {6},       // successors of vertice 3 
+  new List<int>() {0},       // successors of vertice 4 
+  new List<int>() {},        // successors of vertice 5 
+  new List<int>() {1, 2, 3}  // successors of vertice 6 
+ });
+        Console.WriteLine("Graph is cyclic: " + IsCyclic(graph));
+
+        // Ch 17 No. 9
+        // Create a graph with 6 vertices (0 through 5)
+        Graph graph = new Graph(6);
+
+        // Add edges (undirected graph)
+        graph.AddEdge(0, 1);
+        graph.AddEdge(0, 2);
+        graph.AddEdge(1, 3);
+        graph.AddEdge(1, 4);
+        graph.AddEdge(2, 5);
+
+        // Perform DFS traversal
+        graph.PerformDFS();*/
+
+        // Ch 17 No. 10
+        string directoryPath = @"C:\Windows\"; // Directory to search
+        string fileExtension = "*.exe";       // File extension to search for
+
+        Console.WriteLine($"Searching for '{fileExtension}' files in '{directoryPath}'...");
+
+        try
+        {
+            SearchDirectory(directoryPath, fileExtension);
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An unexpected error occurred: {ex.Message}");
+        }
+
+    }
+
+    // Ch 17 No. 10
+    static void SearchDirectory(string directoryPath, string fileExtension)
+    {
+        try
+        {
+            // Get all files in the current directory with the specified extension
+            string[] files = Directory.GetFiles(directoryPath, fileExtension);
+
+            foreach (string file in files)
+            {
+                Console.WriteLine(file);
+            }
+
+            // Recursively search in all subdirectories
+            string[] subdirectories = Directory.GetDirectories(directoryPath);
+            foreach (string subdirectory in subdirectories)
+            {
+                SearchDirectory(subdirectory, fileExtension);
+            }
+        }
+        catch (UnauthorizedAccessException)
+        {
+            Console.WriteLine($"Access denied to directory: {directoryPath}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error while accessing directory {directoryPath}: {ex.Message}");
+        }
+    }
+    // Ch 17 No. 8
+    static bool IsCyclic(Graph graph)
+    {
+        bool[] visited = new bool[graph.Size];
+        bool[] recStack = new bool[graph.Size];
+
+        for (int i = 0; i < graph.Size; i++)
+        {
+            if (IsCyclicUtil(graph, i, visited, recStack))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    static bool IsCyclicUtil(Graph graph, int v, bool[] visited, bool[] recStack)
+    {
+        if (recStack[v]) return true; // Node is in the recursion stack (cycle detected)
+        if (visited[v]) return false; // Node already processed, no cycle here
+
+        visited[v] = true;
+        recStack[v] = true;
+
+        foreach (int neighbor in graph.GetSuccessors(v))
+        {
+            if (IsCyclicUtil(graph, neighbor, visited, recStack))
+            {
+                return true;
+            }
+        }
+
+        recStack[v] = false; // Remove the node from recursion stack
+        return false;
+    }
+
+    // Ch 17 No. 7
+    static Graph graph = new Graph(new List<int>[] {
+  new List<int>() {4},       // successors of vertice 0 
+  new List<int>() {1, 2, 6}, // successors of vertice 1 
+  new List<int>() {1, 6},    // successors of vertice 2 
+  new List<int>() {6},       // successors of vertice 3 
+  new List<int>() {0},       // successors of vertice 4 
+  new List<int>() {},        // successors of vertice 5 
+  new List<int>() {1, 2, 3}  // successors of vertice 6 
+ });
+
+    static bool[] visited = new bool[graph.Size];
+
+    static void TraverseDFS(int v)
+    {
+        if (!visited[v])
+        {
+            Console.Write(v + " ");
+            visited[v] = true;
+            foreach (int child in graph.GetSuccessors(v))
+            {
+                TraverseDFS(child);
+            }
+        }
     }
 
     // Ch 17 No. 6

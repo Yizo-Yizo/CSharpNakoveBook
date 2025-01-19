@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\panth\\OneDrive\\Documents\\Git\\CSharpNakoveBook\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{60884517-3761-478F-AE4F-827F0FEED461}|C#\\C#.csproj|c:\\users\\panth\\onedrive\\documents\\git\\csharpnakovebook\\c#\\binarytreee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60884517-3761-478F-AE4F-827F0FEED461}|C#\\C#.csproj|solutionrelative:c#\\binarytreee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60884517-3761-478F-AE4F-827F0FEED461}|C#\\C#.csproj|c:\\users\\panth\\onedrive\\documents\\git\\csharpnakovebook\\c#\\graph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60884517-3761-478F-AE4F-827F0FEED461}|C#\\C#.csproj|solutionrelative:c#\\graph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{60884517-3761-478F-AE4F-827F0FEED461}|C#\\C#.csproj|c:\\users\\panth\\onedrive\\documents\\git\\csharpnakovebook\\c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{60884517-3761-478F-AE4F-827F0FEED461}|C#\\C#.csproj|solutionrelative:c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{60884517-3761-478F-AE4F-827F0FEED461}|C#\\C#.csproj|c:\\users\\panth\\onedrive\\documents\\git\\csharpnakovebook\\c#\\folder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60884517-3761-478F-AE4F-827F0FEED461}|C#\\C#.csproj|solutionrelative:c#\\folder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60884517-3761-478F-AE4F-827F0FEED461}|C#\\C#.csproj|c:\\users\\panth\\onedrive\\documents\\git\\csharpnakovebook\\c#\\file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60884517-3761-478F-AE4F-827F0FEED461}|C#\\C#.csproj|solutionrelative:c#\\file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{60884517-3761-478F-AE4F-827F0FEED461}|C#\\C#.csproj|c:\\users\\panth\\onedrive\\documents\\git\\csharpnakovebook\\c#\\binarytree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{60884517-3761-478F-AE4F-827F0FEED461}|C#\\C#.csproj|solutionrelative:c#\\binarytree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60884517-3761-478F-AE4F-827F0FEED461}|C#\\C#.csproj|c:\\users\\panth\\onedrive\\documents\\git\\csharpnakovebook\\c#\\binarytreee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60884517-3761-478F-AE4F-827F0FEED461}|C#\\C#.csproj|solutionrelative:c#\\binarytreee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,31 +34,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 217,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BinaryTreee.cs",
-              "DocumentMoniker": "C:\\Users\\panth\\OneDrive\\Documents\\Git\\CSharpNakoveBook\\C#\\BinaryTreee.cs",
-              "RelativeDocumentMoniker": "C#\\BinaryTreee.cs",
-              "ToolTip": "C:\\Users\\panth\\OneDrive\\Documents\\Git\\CSharpNakoveBook\\C#\\BinaryTreee.cs",
-              "RelativeToolTip": "C#\\BinaryTreee.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAQwCEAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T05:24:22.833Z",
-              "EditorCaption": ""
             }
           ]
         },
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Folder.cs",
+              "DocumentMoniker": "C:\\Users\\panth\\OneDrive\\Documents\\Git\\CSharpNakoveBook\\C#\\Folder.cs",
+              "RelativeDocumentMoniker": "C#\\Folder.cs",
+              "ToolTip": "C:\\Users\\panth\\OneDrive\\Documents\\Git\\CSharpNakoveBook\\C#\\Folder.cs",
+              "RelativeToolTip": "C#\\Folder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T01:06:55.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "File.cs",
+              "DocumentMoniker": "C:\\Users\\panth\\OneDrive\\Documents\\Git\\CSharpNakoveBook\\C#\\File.cs",
+              "RelativeDocumentMoniker": "C#\\File.cs",
+              "ToolTip": "C:\\Users\\panth\\OneDrive\\Documents\\Git\\CSharpNakoveBook\\C#\\File.cs",
+              "RelativeToolTip": "C#\\File.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T01:06:18.879Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -55,20 +80,46 @@
               "RelativeDocumentMoniker": "C#\\Program.cs",
               "ToolTip": "C:\\Users\\panth\\OneDrive\\Documents\\Git\\CSharpNakoveBook\\C#\\Program.cs",
               "RelativeToolTip": "C#\\Program.cs",
-              "ViewState": "AgIAAAAIAAAAAAAAAAAtwA4IAABPAAAAAAAAAA==",
+              "ViewState": "AgIAAGgIAAAAAAAAAAAswEYIAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-11-13T20:31:27.596Z",
+              "WhenOpened": "2025-01-19T00:32:32.006Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Graph.cs",
+              "DocumentMoniker": "C:\\Users\\panth\\OneDrive\\Documents\\Git\\CSharpNakoveBook\\C#\\Graph.cs",
+              "RelativeDocumentMoniker": "C#\\Graph.cs",
+              "ToolTip": "C:\\Users\\panth\\OneDrive\\Documents\\Git\\CSharpNakoveBook\\C#\\Graph.cs",
+              "RelativeToolTip": "C#\\Graph.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAowD8AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-18T22:35:31.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BinaryTreee.cs",
+              "DocumentMoniker": "C:\\Users\\panth\\OneDrive\\Documents\\Git\\CSharpNakoveBook\\C#\\BinaryTreee.cs",
+              "RelativeDocumentMoniker": "C#\\BinaryTreee.cs",
+              "ToolTip": "C:\\Users\\panth\\OneDrive\\Documents\\Git\\CSharpNakoveBook\\C#\\BinaryTreee.cs",
+              "RelativeToolTip": "C#\\BinaryTreee.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T08:22:49.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "BinaryTree.cs",
               "DocumentMoniker": "C:\\Users\\panth\\OneDrive\\Documents\\Git\\CSharpNakoveBook\\C#\\BinaryTree.cs",
               "RelativeDocumentMoniker": "C#\\BinaryTree.cs",
               "ToolTip": "C:\\Users\\panth\\OneDrive\\Documents\\Git\\CSharpNakoveBook\\C#\\BinaryTree.cs",
               "RelativeToolTip": "C#\\BinaryTree.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAkwD0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAwEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-13T07:39:17.612Z",
               "EditorCaption": ""
